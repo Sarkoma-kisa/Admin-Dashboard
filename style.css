@@ -241,6 +241,30 @@
   color: grey;
 }
 
-.trend {
-  background-color: purple;
+.trend__items {
+  display: grid;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 35px 25px 30px;
+}
+
+.trend__item {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.trend__img {
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.trend__name {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.trend__subtitle {
+  font-size: 15px;
+  font-weight: 300;
+  color: grey;
 }
