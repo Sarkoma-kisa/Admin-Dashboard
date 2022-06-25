@@ -1,5 +1,6 @@
 
 .container {
+  font-family: 'Quicksand', sans-serif;
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 2fr 2fr;
@@ -17,6 +18,11 @@
   margin-bottom: 25px;
 }
 
+.header__search {
+  display: flex;
+  align-items: center;
+}
+
 .header__search-icon {
   background-color: transparent;
   border: none;
@@ -26,14 +32,15 @@
 .header__search-input {
   border: none;
   border-radius: 15px;
-  background-color: grey;
-  width: 400px;
-  height: 25px;
+  background-color: #fee2e2;
+  width: 500px;
+  height: 30px;
   padding: 0 10px;
 }
 
 .header__user-small {
   display: flex;
+  align-items: center;
 }
 
 .header__notification {
@@ -48,6 +55,8 @@
 
 .header__small-photo img {
   border-radius: 50%;
+  width: 50px;
+  height: 50px;
 }
 
 .header__small-name {
@@ -72,8 +81,8 @@
 }
 
 .header__big-photo img {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;  
 }
 
@@ -98,7 +107,7 @@
   font-size: 18px;
   font-weight: 700;
   color: #fff;
-  background-color: blue;
+  background-color: #ef4444;
   padding: 10px 25px;
 }
 
@@ -107,12 +116,12 @@
 }
 
 .sidebar {
-  background-color: rgb(25, 25, 46);
+  background-color: #ef4444;
   grid-column: 1 / span 1;
   grid-row: 1 / span 3;
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  gap: 45px;
+  grid-template-rows: 1fr 1fr 2fr;
+  gap: 20px;
 }
 
 .sidebar__logo {
@@ -143,6 +152,56 @@
   font-weight: 700;
   color: #fff;
   margin-bottom: 15px;
+  position: relative;
+}
+
+.menu__home::before,
+.menu__profile::before,
+.menu__message::before,
+.menu__history::before,  
+.menu__group::before,
+.menu__setting::before,
+.menu__support::before,
+.menu__alien::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 20px;
+  top: -1px;
+  background-repeat: no-repeat;
+}
+
+.menu__home::before {
+  background-image: url('../images/home.svg');
+}
+
+.menu__profile::before {
+  background-image: url('../images/account.svg');
+}
+
+.menu__message::before {
+  background-image: url('../images/message.svg');
+}
+
+.menu__history::before {
+  background-image: url('../images/clock.svg');
+}
+
+.menu__group::before {
+  background-image: url('../images/account-group.svg');
+}
+
+.menu__setting::before {
+  background-image: url('../images/cog.svg');
+}
+
+.menu__support::before {
+  background-image: url('../images/help-circle.svg');
+}
+
+.menu__alien::before {
+  background-image: url('../images/alien.svg');
 }
 
 .other {
@@ -150,7 +209,7 @@
 }
 
 .main-container {
-  background-color: grey;
+  background-color: #fef2f2;
   padding: 20px 10px;
   grid-column: 2 / span 1;
   grid-row: 2 / span 2;
@@ -180,7 +239,7 @@
 .project__item {
   background-color: #fff;
   border-radius: 10px;
-  border-left: 8px solid yellow;
+  border-left: 8px solid #dc2626;
   padding: 35px 20px 15px;
 }
 
@@ -220,7 +279,7 @@
 
 .announcement__item {
   padding-bottom: 12px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #fca5a5;
   margin-bottom: 15px;
 }
 
@@ -250,12 +309,15 @@
 
 .trend__item {
   display: flex;
+  align-items: center;
   margin-bottom: 20px;
 }
 
 .trend__img {
   border-radius: 50%;
   margin-right: 20px;
+  width: 50px;
+  height: 50px;
 }
 
 .trend__name {
